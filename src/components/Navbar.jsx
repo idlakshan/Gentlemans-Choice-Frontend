@@ -15,7 +15,7 @@ const Navbar = () => {
 
         {/* navbar logo */}
         <div className='nav__logo'>
-          <Link to="/">Gentleman's Choice <span>.</span></Link>
+          <Link to="/">Gentleman's Choice<span>.</span></Link>
         </div>
 
         {/* navbar Icons */}
