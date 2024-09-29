@@ -1,0 +1,117 @@
+[
+    {
+        "id": 1,
+        "name": "Polaroid Sunglasses",
+        "category": "accessories",
+        "description": "Sleek and stylish Polaroid sunglasses with polarized lenses, offering UV protection and modern design for a sharp, comfortable look.",
+        "price": 2300.00,
+        "oldPrice": 2630.00,
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "color": "gold",
+        "rating": 4.5,
+        "author": "admin"
+    },
+    {
+        "id": 2,
+        "name": "Moose Men’s Chino Pant - Steel Blue",
+        "category": "dress",
+        "description": "Comfortable and stylish steel blue chinos, perfect for casual or semi-formal wear, featuring a modern fit and durable fabric.",
+        "price": 3490.00,
+        "oldPrice": 4200.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TM12112.1.jpg?v=1722240552",
+        "color": "blue",
+        "rating": 4.0
+      },      
+      {
+        "id": 3,
+        "name": "Moose Men’s Chino Pant - Dark Green",
+        "category": "dress",
+        "description": "Dark green chinos with a sleek, modern fit, perfect for both casual and smart occasions, offering style and comfort in durable fabric.",
+        "price": 3490.00,
+        "oldPrice": 4200.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TM113671.jpg?v=1722229996",
+        "color": "green",
+        "rating": 4.7
+      },
+      {
+        "id": 4,
+        "name": "Trafford Short Sleeve Printed Shirt",
+        "category": "dress",
+        "description": "Stylish short sleeve printed shirt with a modern fit, perfect for casual outings or smart-casual occasions. Made from lightweight fabric for comfort and breathability.",
+        "price": 3490.00,
+        "oldPrice": 4200.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TM14680.1-scaled.jpg?v=1722255227",
+        "color": "blue",
+        "rating": 4.3
+      },
+      {
+        "id": 5,
+        "name": "iQ2 Long Sleeve Printed Linen Shirt",
+        "category": "dress",
+        "description": "Elegant long sleeve printed linen shirt, perfect for both casual and formal settings. Made from breathable linen fabric, offering a comfortable and stylish fit.",
+        "price": 3795.00,
+        "oldPrice": 3900.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TM11940.jpg?v=1722234143",
+        "color": "green",
+        "rating": 4.8
+      },
+      {
+        "id": 6,
+        "name": "Whiskey Bent Hat Co Troubadour Cap",
+        "category": "accessories",
+        "description": "Stylish Troubadour cap featuring a classic design, perfect for adding a touch of flair to any outfit. Made with quality materials for comfort and durability.",
+        "price": 1390.00,
+        "image": "https://www.dollarwesternwear.com/cdn/shop/products/troubador-white_720x.jpg?v=1632248235",
+        "color": "black",
+        "rating": 4.4
+      },
+      {
+        "id": 7,
+        "name": "Leather Office Bag",
+        "category": "accessories",
+        "description": "Premium leather office bag designed for professionals, featuring ample space, durable construction, and a sleek, timeless look. Perfect for carrying laptops and essentials in style.",
+        "price": 7690.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TA13808.jpg?v=1722241937",
+        "color": "brown",
+        "rating": 4.1
+      },
+      {
+        "id": 8,
+        "name": "Men's Formal Leather Shoe",
+        "category": "footwares",
+        "description": "Elegant formal leather shoes crafted for comfort and style. Perfect for office wear or formal events, featuring high-quality leather and a sleek design.",
+        "price": 7690.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TA14388.1.jpg?v=1722250360",
+        "color": "black",
+        "rating": 4.4
+      },
+      {
+        "id": 9,
+        "name": "Formal Leather Shoe",
+        "category": "footwares",
+        "description": "Sophisticated formal leather shoes in brown, designed for style and comfort. Ideal for office wear or formal occasions, featuring premium leather and a polished look.",
+        "price": 7690.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TA14352.1.jpg?v=1722250329",
+        "color": "brown",
+        "rating": 4.9
+      },
+      {
+        "id": 10,
+        "name": "Hugo Boss The Scent for Her EDP - 100ml",
+        "category": "perfumes",
+        "description": "A luxurious and captivating fragrance for women, featuring notes of peach, freesia, and cocoa. Hugo Boss The Scent for Her offers a sensual, long-lasting scent, perfect for any occasion.",
+        "price": 24990.00,
+        "image": "https://thilakawardhana.com/cdn/shop/files/TA14935.png?v=1726296718",
+        "color": "gold",
+        "rating": 4.6
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+]

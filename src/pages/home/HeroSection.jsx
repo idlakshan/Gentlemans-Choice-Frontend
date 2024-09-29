@@ -17,7 +17,7 @@ const cards = [
         title: "Gents Dresses"
     },
     {
-        id: 1,
+        id: 3,
         image: card3,
         trend: "2024 Trend",
         title: "Gents Casuals"
