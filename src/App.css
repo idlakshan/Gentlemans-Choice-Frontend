@@ -92,7 +92,7 @@ nav {
 .section__container {
   max-width: var(--max-width-1200);
   margin: auto;
-  padding: 1.5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .header__container {
@@ -162,14 +162,14 @@ nav {
 .header__image img {
   position: absolute;
   left: 50%;
-  bottom: -0.1rem;
+  bottom: -3rem;
   transform: translateX(-50%);
   max-width: 350px;
 }
 
 .product__grid {
   max-width: var(--max-width-900);
-  margin: 4rem auto;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -309,9 +309,9 @@ nav {
 .deals__image img {
   position: absolute;
   left: 50%;
-  bottom: -1.4rem;
+  bottom: -3.9rem;
   transform: translateX(-50%);
-  max-width: 550px;
+  max-width: 700px;
 }
 
 .deals__content {
@@ -368,6 +368,47 @@ nav {
   color: var(--text-dark);
 }
 
+
+.banner__container {
+  max-width: var(--max-width-900);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.banner__card {
+  text-align: center;
+}
+
+.banner__card span {
+  margin-bottom: 1rem;
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.banner__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.banner__card p {
+  color: var(--text-light);
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (width < 900px) {
   .nav__links {
     display: none;
@@ -410,6 +451,10 @@ nav {
     min-height: 300px;
     grid-area: 2/1/3/2;
   }
+
+  .banner__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -421,4 +466,9 @@ nav {
   .hero__container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .banner__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
