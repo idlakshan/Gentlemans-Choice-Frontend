@@ -52,7 +52,7 @@ const Search = () => {
 
                 <div className='product__btn'>
                     {
-                        visibleCount < products.length && filteredProducts.length > 8  && (
+                        visibleCount < products.length && filteredProducts.length > visibleCount  && (
                             <button className='btn' onClick={loadMoreProducts}>Load More</button>
                         )
                     }
