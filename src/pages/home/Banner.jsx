@@ -7,7 +7,7 @@ const Banner = () => {
     <div className='section__container header__container'>
         <div className='header__content'>
             <h4>UP TO 20% DISCOUNT ON</h4>
-            <h1>Gen's Choice</h1>
+            <h1>Gent's Choice</h1>
             <p>Discover the latest trends and express your unique style with our Gentleman's Choice website. Explore a curated collection
              of clothing, accessories, and footwear that caters to every taste and occasion.   
             </p>

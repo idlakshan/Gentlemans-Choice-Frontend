@@ -58,6 +58,10 @@ nav {
   color: var(--text-dark);
 }
 
+.shortname{
+  display: none;
+}
+
 .nav__logo span {
   color: var(--primary-color);
 }
@@ -568,6 +572,18 @@ nav {
 
 
 @media (width < 600px) {
+  .nav__logo {
+    font-size: 1rem;
+  }
+
+  .shortname{
+    display: inline;
+  }
+
+  .fullname{
+    display: none;
+  }
+
   .product__grid {
     grid-template-columns: repeat(2, 1fr);
   }

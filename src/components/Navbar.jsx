@@ -15,7 +15,8 @@ const Navbar = () => {
 
         {/* navbar logo */}
         <div className='nav__logo'>
-          <Link to="/">Gentleman's Choice<span>.</span></Link>
+          <Link className='fullname' to="/">Gentleman's Choice<span>.</span></Link>
+          <Link className='shortname' to="/">Gent's Choice<span>.</span></Link>
         </div>
 
         {/* navbar Icons */}
