@@ -6,15 +6,21 @@ const Search = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredProducts, setFilteredProducts] = useState(products);
+    const [visibleCount, setVisibleCount] = useState(8);
+
 
     const handleSearch = () => {
         //console.log("hii");
-        const query=searchQuery.toLowerCase();
+        const query = searchQuery.toLowerCase();
 
         const filtered = products.filter((product) => {
-           return product.name.toLowerCase().includes(query) || product.category.toLowerCase().includes(query);
+            return product.name.toLowerCase().includes(query) || product.category.toLowerCase().includes(query);
         });
         setFilteredProducts(filtered);
+    }
+
+    const loadMoreProducts = () => {
+       setVisibleCount((pre)=>pre+4);
     }
 
 
@@ -33,7 +39,7 @@ const Search = () => {
                         placeholder='Search for products...'
                         className='w-full max-w-4xl p-2 border rounded'
                         value={searchQuery}
-                        onChange={(e)=>setSearchQuery(e.target.value)}
+                        onChange={(e) => setSearchQuery(e.target.value)}
                     />
 
                     <button
@@ -42,7 +48,16 @@ const Search = () => {
                     >Search</button>
                 </div>
 
-                <ProductCards products={filteredProducts} />
+                <ProductCards products={filteredProducts.slice(0, visibleCount)} />
+
+                <div className='product__btn'>
+                    {
+                        visibleCount < products.length && filteredProducts.length > 8  && (
+                            <button className='btn' onClick={loadMoreProducts}>Load More</button>
+                        )
+                    }
+
+                </div>
 
             </section>
 
