@@ -32,6 +32,10 @@ const ShopPage = () => {
             filteredProducts = filteredProducts.filter((product) => product.category === filterState.category)
         }
 
+        if (filterState.color && filterState.color !== 'all') {
+            filteredProducts = filteredProducts.filter((product) => product.color === filterState.color);
+        }
+
         setProducts(filteredProducts);
     }
 
