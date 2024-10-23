@@ -36,6 +36,11 @@ const ShopPage = () => {
             filteredProducts = filteredProducts.filter((product) => product.color === filterState.color);
         }
 
+        if(filterState.priceRange){
+            const {min,max}=filterState.priceRange;
+            filteredProducts=filteredProducts.filter((product)=>product.price >= min && product.price <= max)
+        }
+
         setProducts(filteredProducts);
     }
 
@@ -62,8 +67,8 @@ const ShopPage = () => {
 
             <section className='section__container'>
                 <div className='flex flex-col md:flex-row md:gap-14 gap-8'>
-                    <div>
-                        <ShopFiltering filterState={filterState} filters={filters} setFilterState={setFilterState} />
+                    <div className='w-1/4'>
+                        <ShopFiltering filterState={filterState} filters={filters} setFilterState={setFilterState} clearFilters={clearFilters}/>
                     </div>
                     <div>
                         <h3 className='text-xl font-medium mb-4'>Products Available {products.length}</h3>
