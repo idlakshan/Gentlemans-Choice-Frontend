@@ -1,7 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+ const products=useSelector((state)=>state.cart.products)
+ console.log(products);
+ 
   return (
     <header className='fixed-nav-bar w-nav'>
       <nav>
@@ -25,7 +29,7 @@ const Navbar = () => {
           <span>
             <button className='hover:text-primary'>
               <i className="ri-shopping-bag-line"></i>
-              <sup className='text-sm bg-primary rounded-full px-1.5 text-white text-center inline-block'>0</sup>
+              <sup className='text-sm bg-primary rounded-full px-1.5 text-white text-center inline-block'>{products.length}</sup>
             </button>
           </span>
           <span><Link to="/login"><i className="ri-user-line"></i></Link></span>
