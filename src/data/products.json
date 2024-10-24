@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "name": "Polaroid Sunglasses",
         "category": "accessories",
         "description": "Sleek and stylish Polaroid sunglasses with polarized lenses, offering UV protection and modern design for a sharp, comfortable look.",
@@ -12,7 +12,7 @@
         "author": "admin"
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "Moose Men’s Chino Pant - Steel Blue",
         "category": "dress",
         "description": "Comfortable and stylish steel blue chinos, perfect for casual or semi-formal wear, featuring a modern fit and durable fabric.",
@@ -23,7 +23,7 @@
         "rating": 4.0
       },      
       {
-        "id": 3,
+        "_id": 3,
         "name": "Moose Men’s Chino Pant - Dark Green",
         "category": "dress",
         "description": "Dark green chinos with a sleek, modern fit, perfect for both casual and smart occasions, offering style and comfort in durable fabric.",
@@ -34,7 +34,7 @@
         "rating": 4.7
       },
       {
-        "id": 4,
+        "_id": 4,
         "name": "Trafford Short Sleeve Printed Shirt",
         "category": "dress",
         "description": "Stylish short sleeve printed shirt with a modern fit, perfect for casual outings or smart-casual occasions. Made from lightweight fabric for comfort and breathability.",
@@ -45,7 +45,7 @@
         "rating": 4.3
       },
       {
-        "id": 5,
+        "_id": 5,
         "name": "iQ2 Long Sleeve Printed Linen Shirt",
         "category": "dress",
         "description": "Elegant long sleeve printed linen shirt, perfect for both casual and formal settings. Made from breathable linen fabric, offering a comfortable and stylish fit.",
@@ -56,7 +56,7 @@
         "rating": 4.8
       },
       {
-        "id": 6,
+        "_id": 6,
         "name": "Whiskey Bent Hat Co Troubadour Cap",
         "category": "accessories",
         "description": "Stylish Troubadour cap featuring a classic design, perfect for adding a touch of flair to any outfit. Made with quality materials for comfort and durability.",
@@ -66,7 +66,7 @@
         "rating": 4.4
       },
       {
-        "id": 7,
+        "_id": 7,
         "name": "Leather Office Bag",
         "category": "accessories",
         "description": "Premium leather office bag designed for professionals, featuring ample space, durable construction, and a sleek, timeless look. Perfect for carrying laptops and essentials in style.",
@@ -76,7 +76,7 @@
         "rating": 4.1
       },
       {
-        "id": 8,
+        "_id": 8,
         "name": "Men's Formal Leather Shoe",
         "category": "footwares",
         "description": "Elegant formal leather shoes crafted for comfort and style. Perfect for office wear or formal events, featuring high-quality leather and a sleek design.",
@@ -86,7 +86,7 @@
         "rating": 4.4
       },
       {
-        "id": 9,
+        "_id": 9,
         "name": "Formal Leather Shoe",
         "category": "footwares",
         "description": "Sophisticated formal leather shoes in brown, designed for style and comfort. Ideal for office wear or formal occasions, featuring premium leather and a polished look.",
@@ -96,7 +96,7 @@
         "rating": 4.9
       },
       {
-        "id": 10,
+        "_id": 10,
         "name": "Hugo Boss The Scent for Her EDP - 100ml",
         "category": "perfumes",
         "description": "A luxurious and captivating fragrance for women, featuring notes of peach, freesia, and cocoa. Hugo Boss The Scent for Her offers a sensual, long-lasting scent, perfect for any occasion.",
