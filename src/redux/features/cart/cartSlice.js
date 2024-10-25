@@ -35,11 +35,11 @@ const cartSlice = createSlice({
 
 const setSelectedItems=(state)=>state.products.reduce((pre,product)=>{
     return Number(pre+product.quantity)
-});
+},0);
 
 const setTotalPrice=(state)=>state.products.reduce((pre,product)=>{
     return Number(pre+product.quantity * product.price)
-});
+},0);
 
 const setTax=(state)=>setTotalPrice(state)*state.taxRate
 
