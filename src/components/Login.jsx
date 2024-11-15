@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { useLoginUserMutation } from '../redux/features/auth/authApi';
 import { toast } from 'sonner';
+import { setUser } from '../redux/features/auth/authSlice';
 
 const Login = () => {
     const [message, setMessage] = useState("");
@@ -25,6 +26,8 @@ const Login = () => {
         try {
             const response=await loginUser(data).unwrap();
            // console.log(response);
+           const {token,user}=response
+           dispatch(setUser({user}))
            toast.success('Login successful');
            navigate("/");
             
