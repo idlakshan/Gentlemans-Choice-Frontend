@@ -80,9 +80,15 @@ nav {
   color: var(--text-dark);
 }
 
-.nav__icons span:hover {
+.nav__icons span:hover:not(:has(.profileImg)) {
   color: var(--primary-color);
 }
+
+li:hover{
+  color: var(--primary-color);
+}
+
+
 
 .link {
   font-weight: 500;
