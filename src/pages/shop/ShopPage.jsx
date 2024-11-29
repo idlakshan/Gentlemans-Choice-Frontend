@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import productsData from '../../data/products.json'
 import ShopFiltering from './ShopFiltering'
 import ProductCards from '../shop/ProductCards'
+import { useFetchAllProductsQuery } from '../../redux/features/product/productApi'
 
 const filters = {
     categories: ['all', 'accessories', 'dress', 'footwares', 'perfumes'],
@@ -16,33 +17,54 @@ const filters = {
 
 const ShopPage = () => {
 
-    const [products, setProducts] = useState(productsData);
+   // const [products, setProducts] = useState(productsData);
     const [filterState, setFilterState] = useState({
         category: 'all',
         color: 'all',
         priceRange: ''
     });
 
+    const [currentPage,setCurrentPage]=useState(1);
+    const [productPerPage,setProductPerPage]=useState(8);
+
+    const{category,color,priceRange}=filterState;
+    //console.log(filterState);
+    
+    const { min: minPrice, max: maxPrice } = priceRange || { min: 0, max: 0 };
+   
+    
+
+    const {data:{products=[],totalPages,totalProducts}={},error,isLoading}=useFetchAllProductsQuery({
+        category:category!=='all'?category:'',
+        color:color!=='all'?color:color,
+        minPrice:isNaN(minPrice)?'':minPrice,
+        maxPrice:isNaN(maxPrice)?'':maxPrice,
+        page:currentPage,
+        limit:productPerPage
+    })
 
 
-    const applyFilter = () => {
-        let filteredProducts = productsData;
 
-        if (filterState.category && filterState.category !== 'all') {
-            filteredProducts = filteredProducts.filter((product) => product.category === filterState.category)
-        }
+    // const applyFilter = () => {
+    //     let filteredProducts = productsData;
 
-        if (filterState.color && filterState.color !== 'all') {
-            filteredProducts = filteredProducts.filter((product) => product.color === filterState.color);
-        }
+    //     if (filterState.category && filterState.category !== 'all') {
+    //         filteredProducts = filteredProducts.filter((product) => product.category === filterState.category)
+    //     }
 
-        if (filterState.priceRange) {
-            const { min, max } = filterState.priceRange;
-            filteredProducts = filteredProducts.filter((product) => product.price >= min && product.price <= max)
-        }
+    //     if (filterState.color && filterState.color !== 'all') {
+    //         filteredProducts = filteredProducts.filter((product) => product.color === filterState.color);
+    //     }
 
-        setProducts(filteredProducts);
-    }
+    //     if (filterState.priceRange) {
+    //         console.log(filterState.priceRange);
+            
+    //         const { min, max } = filterState.priceRange;
+    //         filteredProducts = filteredProducts.filter((product) => product.price >= min && product.price <= max)
+    //     }
+
+    //     setProducts(filteredProducts);
+    // }
 
     const clearFilters = () => {
         setFilterState({
@@ -52,10 +74,16 @@ const ShopPage = () => {
         });
     }
 
-    useEffect(() => {
-        applyFilter();
-    }, [filterState])
+    // useEffect(() => {
+    //     applyFilter();
+    // }, [filterState])
 
+    if(isLoading){
+        return <div>Loading...</div>
+    }
+    if(error){
+        return <div>Error loading products...</div>
+    }
 
     return (
         <>
