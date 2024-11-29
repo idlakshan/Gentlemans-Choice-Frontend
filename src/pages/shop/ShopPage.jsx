@@ -43,6 +43,8 @@ const ShopPage = () => {
         limit:productPerPage
     })
 
+    //console.log(totalPages, totalProducts,currentPage);
+    
 
 
     // const applyFilter = () => {
@@ -79,6 +81,7 @@ const ShopPage = () => {
             if(pageNumber>0 && pageNumber <= totalPages){
                 setCurrentPage(pageNumber)
             }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     const startProduct=(currentPage-1)*productPerPage+1;
