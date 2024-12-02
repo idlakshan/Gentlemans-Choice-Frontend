@@ -5,6 +5,7 @@ import { useFetchProductByIdQuery } from '../../../redux/features/product/produc
 import { data } from 'autoprefixer';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../redux/features/cart/cartSlice';
+import ReviewsCard from '../Reviews/ReviewsCard';
 
 const SingleProduct = () => {
     const { id } = useParams();
@@ -13,12 +14,12 @@ const SingleProduct = () => {
     const { data: productData, error, isLoading } = useFetchProductByIdQuery(id);
     const dispatch = useDispatch();
 
-    // console.log(productData);
+     //console.log(productData);
 
     const singleProduct = productData?.product || {};
     const productReviews = productData?.reviews || [];
 
-    //   console.log(singleProduct, productReviews);
+       //console.log(singleProduct, productReviews);
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
@@ -82,7 +83,7 @@ const SingleProduct = () => {
             </section>
 
             <section className='section__container mt-8'>
-                Reviews
+               <ReviewsCard productReviews={productReviews}/>
 
             </section>
         </>
