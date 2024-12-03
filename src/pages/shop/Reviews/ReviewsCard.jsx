@@ -18,7 +18,7 @@ const ReviewsCard = ({productReviews}) => {
   }
 
   return (
-    <div className='my-6 bg-white p-8'>
+    <div className='my-2 bg-white p-8'>
            {
             productReviews.length>0?(<div>
                 <h3 className='text-lg font-medium'>All comments...</h3>
@@ -48,7 +48,7 @@ const ReviewsCard = ({productReviews}) => {
             </div>):<p>No reviews yet!</p>
            }
 
-           <div className='mt-12'>
+           <div className='mt-6'>
               <button onClick={handleOpenReviewModel} className='px-6 py-3 bg-primary text-white rounded-md'>Add A Review</button>
            </div>
 
