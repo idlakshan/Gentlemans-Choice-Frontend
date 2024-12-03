@@ -5,7 +5,7 @@ import { getBaseUrl } from '../../../utils/baseURL';
 const reviewApi=createApi({
     reducerPath:"reviewApi",
     baseQuery:fetchBaseQuery({
-        baseUrl:`${getBaseUrl}/api/reviews`,
+        baseUrl: `${getBaseUrl()}/api/reviews`,
         credentials:'include',
     }),
     tagTypes:['reviews'],
