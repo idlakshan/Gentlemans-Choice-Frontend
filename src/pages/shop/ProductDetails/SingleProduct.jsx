@@ -14,12 +14,12 @@ const SingleProduct = () => {
     const { data: productData, error, isLoading } = useFetchProductByIdQuery(id);
     const dispatch = useDispatch();
 
-     //console.log(productData);
+    //console.log(productData);
 
     const singleProduct = productData?.product || {};
     const productReviews = productData?.reviews || [];
 
-       //console.log(singleProduct, productReviews);
+    //console.log(singleProduct, productReviews);
 
     const handleAddToCart = (product) => {
         dispatch(addToCart(product));
@@ -49,12 +49,17 @@ const SingleProduct = () => {
                 </div>
             </section>
 
-            <section className='section__container mt-8'>
-                <div className='flex flex-col items-center md:flex-row gap-8'>
-                    <div className='md:w-1/2 w-full'>
-                        <img className='rounded-md w-full h-auto' src={singleProduct?.image} alt="" />
-
+            <section className='section__container'>
+                <div className='flex flex-col items-center md:flex-row justify-around'>
+                    <div className="md:w-2/5 w-full h-auto flex justify-center">
+                        <img
+                            className="max-h-[28rem] md:h-[20rem] w-[100%] object-contain"
+                            src={singleProduct?.image}
+                            alt=""
+                        />
                     </div>
+
+
 
                     <div className='md:w-1/2 w-full'>
                         <h3 className='text-2xl font-semibold mb-4'>{singleProduct?.name}</h3>
@@ -83,7 +88,7 @@ const SingleProduct = () => {
             </section>
 
             <section className='section__container mt-8'>
-               <ReviewsCard productReviews={productReviews}/>
+                <ReviewsCard productReviews={productReviews} />
 
             </section>
         </>

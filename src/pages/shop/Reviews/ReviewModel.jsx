@@ -86,7 +86,7 @@ const ReviewModel = ({ isOpen, handleCloseReviewModel }) => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows="4"
-            className="w-full border border-gray-300 rounded-md mb-4 p-2"
+            className="w-full border border-gray-300 rounded-md mb-4 p-2 focus:outline-none"
           >
           </textarea>
 

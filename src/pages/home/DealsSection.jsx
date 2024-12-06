@@ -5,7 +5,7 @@ const DealsSection = () => {
   return (
     <section className='section__container deals__container'>
          <div className='deals__image'>
-            <img src={dealsImg} alt="deal Img" />
+            <img src={dealsImg} className='mb-4' alt="deal Img" />
          </div>
 
          <div className='deals__content'>

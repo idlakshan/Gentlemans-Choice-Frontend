@@ -22,7 +22,7 @@ const TrendingProducts = () => {
 
             {/* Load more button */}
 
-            <div className='product__btn'>
+            <div className='product__btn mt-6'>
                 {
                     visibleCount< products.length && (
                         <button className='btn' onClick={loadMoreProducts}>Load More</button>

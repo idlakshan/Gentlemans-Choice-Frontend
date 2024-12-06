@@ -18,7 +18,7 @@ const ReviewsCard = ({productReviews}) => {
   }
 
   return (
-    <div className='my-2 bg-white p-8'>
+    <div className='my-1 bg-white p-8'>
            {
             productReviews.length>0?(<div>
                 <h3 className='text-lg font-medium'>All comments...</h3>
@@ -38,7 +38,7 @@ const ReviewsCard = ({productReviews}) => {
                                      
                                    </div>
                                </div>
-                               <div className='text-gray-600 border mt-5 p-5'>
+                               <div className='text-gray-600 border mt-1 p-2'>
                                   <p className='md:w-4/5'>{review?.comment}</p>
                                </div>
                             </div>
