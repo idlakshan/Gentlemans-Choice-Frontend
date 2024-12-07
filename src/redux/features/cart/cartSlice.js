@@ -6,7 +6,10 @@ const initialState = {
     totalPrice: 0,
     discount: 0,
     discountRate: 0.2,
-    grandTotal: 0
+    subTotal: 0,
+    delivery: 0,
+    deliveryRate: 0.04,
+    grandTotal:0
 }
 
 
@@ -27,7 +30,9 @@ const cartSlice = createSlice({
             state.selectedItems = setSelectedItems(state);
             state.totalPrice = setTotalPrice(state);
             state.discount = setDiscount(state);
-            state.grandTotal = setGrandTotal(state);
+            state.subTotal = setSubTotal(state);
+            state.delivery=setDelivery(state)
+            state.grandTotal=setGrandTotal(state)
         },
 
         updateQuantity: (state, action) => {
@@ -49,7 +54,9 @@ const cartSlice = createSlice({
             state.selectedItems = setSelectedItems(state);
             state.totalPrice = setTotalPrice(state);
             state.discount = setDiscount(state);
-            state.grandTotal = setGrandTotal(state);
+            state.subTotal = setSubTotal(state);
+            state.delivery=setDelivery(state);
+            state.grandTotal=setGrandTotal(state)
         },
 
         clearCart: (state) => {
@@ -57,7 +64,9 @@ const cartSlice = createSlice({
             state.selectedItems = setSelectedItems(state);
             state.totalPrice = setTotalPrice(state);
             state.discount = setDiscount(state);
-            state.grandTotal = setGrandTotal(state);
+            state.subTotal = setSubTotal(state);
+            state.delivery=setDelivery(state);
+            state.grandTotal=setGrandTotal(state)
         },
 
         removeFromCart: (state, action) => {
@@ -65,7 +74,9 @@ const cartSlice = createSlice({
             state.selectedItems = setSelectedItems(state);
             state.totalPrice = setTotalPrice(state);
             state.discount = setDiscount(state);
-            state.grandTotal = setGrandTotal(state);
+            state.subTotal = setSubTotal(state);
+            state.delivery=setDelivery(state);
+            state.grandTotal=setGrandTotal(state)
 
         }
     }
@@ -82,8 +93,14 @@ const setTotalPrice = (state) => state.products.reduce((pre, product) => {
 
 const setDiscount = (state) => setTotalPrice(state) * state.discountRate
 
-const setGrandTotal = (state) => {
+const setSubTotal = (state) => {
     return setTotalPrice(state) - setTotalPrice(state) * state.discountRate
+}
+
+const setDelivery = (state) => setSubTotal(state) * state.deliveryRate
+
+const setGrandTotal = (state) => {
+    return setSubTotal(state) + setSubTotal(state) * state.deliveryRate
 }
 
 export const { addToCart, updateQuantity, clearCart, removeFromCart } = cartSlice.actions;

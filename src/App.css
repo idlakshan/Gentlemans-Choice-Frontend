@@ -16,7 +16,9 @@
   --body-font: "Inter", sans-serif;
   --sans-serif-font: "Lato", sans-serif;
 }
-
+html {
+  scroll-behavior: auto; /* Disable smooth scroll if it's causing short jumps */
+}
 
 * {
   padding: 0;
@@ -35,7 +37,9 @@ a {
 
 body {
   font-family: var(--sans-serif-font);
+  
 }
+
 
 nav {
   max-width: var(--max-width-1200);
@@ -516,6 +520,41 @@ li:hover{
   border-top: 2px solid var(--extra-light);
 }
 
+.cart__container {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.cart__item {
+  flex: 0 0 calc(100% / 6 - 8px); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cart__item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+.cart__item p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+}
 
 
 
@@ -578,6 +617,7 @@ li:hover{
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 @media (width < 600px) {

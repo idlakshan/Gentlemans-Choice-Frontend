@@ -24,7 +24,7 @@ const CartModal = ({ isCartOpen, handleCartToggle, products }) => {
                 <div className='p-4 mt-4'>
                     <div className='flex justify-between items-center mb-4'>
                         <h4 className='text-xl font-semibold'>Your Cart</h4>
-                        <button onClick={handleCartToggle} className='text-gray-600 hover:text-gray-900'><i className='ri-xrp-fill bg-black pt-1 text-white'></i></button>
+                        <button onClick={handleCartToggle} className='text-gray-600 hover:text-gray-900 pr-5'><i className='ri-xrp-fill bg-black pt-1 text-white'></i></button>
                     </div>
 
                     <div className='cart-items'>
@@ -65,7 +65,7 @@ const CartModal = ({ isCartOpen, handleCartToggle, products }) => {
 
                     {
                         products.length > 0 && (
-                            <OrderSummary />
+                            <OrderSummary handleCartToggle={handleCartToggle} />
                         )
                     }
 
