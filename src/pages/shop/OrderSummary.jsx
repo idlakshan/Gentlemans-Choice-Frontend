@@ -4,7 +4,7 @@ import { clearCart } from '../../redux/features/cart/cartSlice';
 
 const OrderSummary = () => {
     //const products=useSelector((store)=>store.cart.products);
-    const {tax,taxRate,totalPrice,grandTotal,selectedItems}=useSelector((store)=>store.cart);
+    const {discount,discountRate,totalPrice,grandTotal,selectedItems}=useSelector((store)=>store.cart);
     const dispatch=useDispatch();
 
 
@@ -14,7 +14,7 @@ const OrderSummary = () => {
             <h2 className='text-xl text-text-dark'>Order Summary</h2>
             <p className='text-text-dark mt-2'>Selected Items : {selectedItems}</p>
             <p>Total Price : Rs {totalPrice.toFixed(2)}</p>
-            <p>Tax ({taxRate * 100}%) : Rs {tax.toFixed(2)}</p>
+            <p>Discount ({discountRate * 100}%) : Rs {discount.toFixed(2)}</p>
             <h3 className='font-bold'>Grand Total : Rs {grandTotal.toFixed(2)}</h3>
 
             <div className='px-4 mb-6'>

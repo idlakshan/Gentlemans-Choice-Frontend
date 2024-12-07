@@ -7,6 +7,7 @@ import ShopPage from "../pages/shop/ShopPage";
 import SingleProduct from "../pages/shop/ProductDetails/SingleProduct";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import PlaceOrder from '../pages/shop/PlaceOrder'
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path :"/shop/:id",
                 element:<SingleProduct/>
+            },
+            {
+                path :"/shop/placeOrder",
+                element:<PlaceOrder/>
             }
 
         ]
@@ -44,7 +49,8 @@ const router = createBrowserRouter([
     {
         path:'/register',
         element:<Register/>
-    }
+    },
+  
 ])
 
 export default router;
