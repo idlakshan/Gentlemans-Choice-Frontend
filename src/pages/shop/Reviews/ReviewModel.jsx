@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { usePostReviewMutation } from '../../../redux/features/reviews/reviewsApi';
-import { comment } from 'postcss';
 import { useFetchProductByIdQuery } from '../../../redux/features/product/productApi';
 import { toast } from 'sonner';
 

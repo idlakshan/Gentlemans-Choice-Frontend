@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import RatingStars from '../../../components/RatingStars';
 import { useFetchProductByIdQuery } from '../../../redux/features/product/productApi';
-import { data } from 'autoprefixer';
+
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../redux/features/cart/cartSlice';
 import ReviewsCard from '../Reviews/ReviewsCard';

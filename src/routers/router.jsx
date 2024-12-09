@@ -8,6 +8,7 @@ import SingleProduct from "../pages/shop/ProductDetails/SingleProduct";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import PlaceOrder from '../pages/shop/PlaceOrder'
+import PaymentSuccess from "../components/PaymentSuccess";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path :"/shop/place-order",
                 element:<PlaceOrder/>
+            },
+            {
+                path :"/success",
+                element:<PaymentSuccess/>
             }
 
         ]
