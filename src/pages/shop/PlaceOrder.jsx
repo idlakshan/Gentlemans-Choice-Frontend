@@ -13,7 +13,6 @@ const PlaceOrder = () => {
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
-    email: "",
     street: "",
     city: "",
     state: "",
@@ -110,7 +109,7 @@ const PlaceOrder = () => {
                 placeholder="Last name"
               />
             </div>
-            <input
+            {/* <input
               required
               name="email"
               onChange={onChangeHandler}
@@ -118,7 +117,7 @@ const PlaceOrder = () => {
               type="email"
               className="border px-3 py-2 rounded-lg w-full focus:outline-none"
               placeholder="Email address"
-            />
+            /> */}
             <input
               required
               name="street"
