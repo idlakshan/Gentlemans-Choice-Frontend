@@ -10,6 +10,7 @@ import Register from "../components/Register";
 import PlaceOrder from '../pages/shop/PlaceOrder'
 import PaymentSuccess from "../components/PaymentSuccess";
 import DashboardLayout from "../pages/dashboard/DashboardLayout";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
    
     {
         path:'/dashboard',
-        element: <DashboardLayout/>,
+        element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
         children:[
             //user routes
             {
@@ -89,27 +90,27 @@ const router = createBrowserRouter([
 
             {
                 path:'admin',
-                element:<div>Admin</div>
+                element:<PrivateRoute role="admin"><div>Admin</div></PrivateRoute>
             },
             {
                 path:'add-new-post',
-                element:<div>New Post</div>
+                element:<PrivateRoute role="admin"><div>New Post</div></PrivateRoute>
             },
             {
                 path:'manage-products',
-                element:<div>Manage-post</div>
+                element:<PrivateRoute role="admin"><div>Manage Post</div></PrivateRoute>
             },
             {
                 path:'update-product/:id',
-                element:<div>Update post</div>
+                element:<PrivateRoute role="admin"><div>Update Post</div></PrivateRoute>
             },
             {
                 path:'users',
-                element:<div>All users</div>
+                element:<PrivateRoute role="admin"><div>All Users</div></PrivateRoute>
             },
             {
                 path:'manage-orders',
-                element:<div>manage orders</div>
+                element:<PrivateRoute role="admin"><div>Manage Orders</div></PrivateRoute>
             },
 
         ]

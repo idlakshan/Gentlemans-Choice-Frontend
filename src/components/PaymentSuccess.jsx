@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { getBaseUrl } from '../utils/baseURL';
-import { data } from 'autoprefixer';
 import TimelineStep from './TimelineStep';
 
 const PaymentSuccess = () => {
