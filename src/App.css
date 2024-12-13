@@ -557,6 +557,10 @@ li:hover{
   font-size: 0.875rem;
 }
 
+.nav__logo p {
+  font-weight: 400; 
+  font-family: var(--body-font); 
+}
 
 
 
