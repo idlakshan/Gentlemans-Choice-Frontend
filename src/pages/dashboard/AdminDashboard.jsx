@@ -1,35 +1,22 @@
 import React from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { useLogoutUserMutation } from '../../redux/features/auth/authApi'
+import { useLogoutUserMutation } from '../../redux/features/auth/authApi';
 import { useDispatch } from 'react-redux';
-import { toast } from 'sonner';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { logout } from '../../redux/features/auth/authSlice';
+import { toast } from 'sonner';
 
-const UserDashboard = () => {
+const AdminDashboard = () => {
+
     const [logoutUser] =useLogoutUserMutation();
     const dispatch=useDispatch();
     const navigate=useNavigate();
 
     const navItems = [
-        {
-            path: '/dashboard', label: 'Dashboard'
-        },
-        {
-            path: '/dashboard/orders',
-            label: "Orders"
-        },
-        {
-            path: '/dashboard/payments',
-            label: "Payments"
-        },
-        {
-            path: '/dashboard/profile',
-            label: "Profile"
-        },
-        {
-            path: '/dashboard/reviews',
-            label: "Reviews"
-        },
+        { path: '/dashboard/admin', label: 'Dashboard' },
+        { path: '/dashboard/add-new-post', label: 'Add Product'  },
+        { path: '/dashboard/manage-products', label: 'Manage Products' },
+        { path: '/dashboard/users', label: 'Users'  },
+        { path: '/dashboard/manage-orders', label: 'Manage Orders'  },
 
     ]
 
@@ -48,8 +35,8 @@ const UserDashboard = () => {
         <div className="space-y-5 bg-white p-8 h-screen flex flex-col">
             <div className="flex-grow">
                 <div className="nav__logo">
-                    <Link className="text-[17px]" to="/">Gentleman's Choice <span>.</span></Link>
-                    <p className="text-sm italic">User dashboard</p>
+                    <Link to="/" className="text-[17px] md:text-[13px]">Gentleman's Choice <span>.</span></Link>
+                    <p className="text-sm md:text-[12px] italic">User dashboard</p>
                 </div>
                 <hr className="mt-5" />
                 <ul className="space-y-5 pt-5">
@@ -76,8 +63,7 @@ const UserDashboard = () => {
                 </button>
             </div>
         </div>
-
     )
 }
 
-export default UserDashboard
+export default AdminDashboard
