@@ -24,7 +24,7 @@ const PaymentSuccess = () => {
 
     }, [])
 
-    console.log(data);
+    
 
  
     if(!order) {return <div>Loading...</div>}

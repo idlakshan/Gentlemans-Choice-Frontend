@@ -22,16 +22,16 @@ const dashboardLayout = () => {
   }
 
   return (
-    <div className='container mx-auto flex flex-col md:flex-row gap-4 items-start justify-start'>
-      <header className='lg:w-1/5 sm:w-2/5 w-full border'>
-       {renderDashboard()}
+    <div className='container mx-auto flex flex-col md:flex-row gap-4 items-start justify-start h-screen'>
+      <header className='lg:w-1/5 sm:w-2/5 w-full h-full border'>
+        {renderDashboard()}
       </header>
-      <main className='p-8 bg-white w-full border mt-5'>
+      <main className='p-8 bg-white w-full h-full flex-grow border mt-0'>
         <Outlet />
       </main>
-
     </div>
-  )
+  );
+  
 }
 
 export default dashboardLayout

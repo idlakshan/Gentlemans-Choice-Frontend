@@ -11,6 +11,7 @@ import PlaceOrder from '../pages/shop/PlaceOrder'
 import PaymentSuccess from "../components/PaymentSuccess";
 import DashboardLayout from "../pages/dashboard/DashboardLayout";
 import PrivateRoute from "./PrivateRoute";
+import UserDashboardMain from "../pages/dashboard/user/dashboard/UserDashboardMain";
 
 const router = createBrowserRouter([
     {
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
             //user routes
             {
                 path:'',
-                element:<div>User Dashboard</div>
+                element:<UserDashboardMain/>
             },
             {
                 path:'orders',
