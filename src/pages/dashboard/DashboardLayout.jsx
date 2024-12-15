@@ -5,7 +5,7 @@ import UserDashboard from './UserDashboard';
 import AdminDashboard from './AdminDashboard';
 
 const dashboardLayout = () => {
-  const {user } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth);
   if (!user) {
     return <Navigate to="/login" replace />
   }
@@ -13,9 +13,9 @@ const dashboardLayout = () => {
   const renderDashboard = () => {
     switch (user?.role) {
       case 'admin':
-        return <AdminDashboard/>;
+        return <AdminDashboard />;
       case 'user':
-        return <UserDashboard/>;
+        return <UserDashboard />;
       default:
         return <Navigate to="/login" replace />;
     }
@@ -26,12 +26,13 @@ const dashboardLayout = () => {
       <header className='lg:w-1/5 sm:w-2/5 w-full h-full border'>
         {renderDashboard()}
       </header>
-      <main className='p-8 bg-white w-full h-full flex-grow border mt-0'>
+      <main className="p-8 bg-white w-full h-full flex-grow border mt-0 overflow-y-scroll scrollbar-hide">
         <Outlet />
       </main>
+
     </div>
   );
-  
+
 }
 
 export default dashboardLayout

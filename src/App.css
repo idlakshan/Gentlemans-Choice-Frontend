@@ -563,6 +563,9 @@ li:hover{
 }
 
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; 
+}
 
 
 
