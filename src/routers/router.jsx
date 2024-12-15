@@ -15,6 +15,7 @@ import UserDashboardMain from "../pages/dashboard/user/dashboard/UserDashboardMa
 import UserOrders from "../pages/dashboard/user/UserOrders";
 import OrderDetails from "../pages/dashboard/user/OrderDetails";
 import UserPayments from "../pages/dashboard/user/dashboard/UserPayments";
+import UserReviews from "../pages/dashboard/user/dashboard/UserReviews";
 
 const router = createBrowserRouter([
     {
@@ -90,7 +91,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'reviews',
-                element:<div>User Reviews</div>
+                element: <UserReviews/>
             },
 
 
