@@ -35,7 +35,7 @@ const AdminDashboard = () => {
         <div className="space-y-5 bg-white p-8 h-screen flex flex-col">
             <div className="flex-grow">
                 <div className="nav__logo">
-                    <Link to="/" className="text-[17px] md:text-[13px]">Gentleman's Choice <span>.</span></Link>
+                    <Link to="/" className="text-[17px] md:text-[17px]">Gentleman's Choice <span>.</span></Link>
                     <p className="text-sm md:text-[12px] italic">User dashboard</p>
                 </div>
                 <hr className="mt-5" />
