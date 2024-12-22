@@ -31,7 +31,7 @@ const Navbar = () => {
     {lable:"Dashboard", path:"/dashboard/admin"},
     {lable:"Manage Items", path:"/dashboard/manage-products"},
     {lable:"All Orders", path:"/dashboard/manage-orders"},
-    {lable:"Add New Post", path:"/dashboard/add-new-post"}
+    {lable:"Add New Post", path:"/dashboard/add-new-product"}
   ]
 
 
