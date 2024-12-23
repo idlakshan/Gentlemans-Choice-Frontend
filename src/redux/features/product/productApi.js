@@ -35,7 +35,7 @@ const productApi = createApi({
                 url: '/create-product',
                 method: "POST",
                 body: newProduct,
-                credentials: "include"
+     
             }),
             invalidatesTags: ["products"]
         }),
