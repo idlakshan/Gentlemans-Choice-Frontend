@@ -31,7 +31,7 @@ const AddProduct = () => {
     const [addProduct,{isLoading,isError}]=useAddProductMutation();
 
     const { user } = useSelector((state) => state.auth);
-    console.log(user._id);
+   // console.log(user._id);
     
 
     const [product, setProduct] = useState({
@@ -63,7 +63,7 @@ const AddProduct = () => {
         }
     
         try {
-            console.log('Submitting product...');
+           // console.log('Submitting product...');
             
             const result = await addProduct({
                 ...product,

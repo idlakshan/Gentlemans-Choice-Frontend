@@ -34,8 +34,7 @@ const productApi = createApi({
             query: (newProduct) => ({
                 url: '/create-product',
                 method: "POST",
-                body: newProduct,
-     
+                body: newProduct,   
             }),
             invalidatesTags: ["products"]
         }),
@@ -54,7 +53,8 @@ const productApi = createApi({
                 method: 'DELETE',
                 credentials: 'include'
             }),
-            invalidatesTags: (res, error, id) => [{ type: "products", id }]
+            // invalidatesTags: (res, error, id) => [{ type: "products", id }]
+            invalidatesTags:["products"]
         })
     })
 });

@@ -38,6 +38,7 @@ const UploadImage = ({ name, setImage }) => {
         })
     }
 
+
     const uploadImage = async (event) => {
         const files = event.target.files;
 
@@ -51,10 +52,9 @@ const UploadImage = ({ name, setImage }) => {
         for (let i = 0; i < files.length; i++) {
             const base = await convertBase64[files[i]];
             base64s.push(base);
-
         }
-
     }
+
 
     return (
         <div>
@@ -76,7 +76,6 @@ const UploadImage = ({ name, setImage }) => {
                     <div className='mt-2 text-sm text-green-600'>
                         <p>Image uploaded successfully!</p>
                         <img src={url} alt="Image" />
-
                     </div>
                 )
             }
