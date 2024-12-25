@@ -45,7 +45,8 @@ const productApi = createApi({
                 body: rest,
                 credentials: "include"
             }),
-            invalidatesTags: (result, error, {id}) => [{ type: "products", id }],
+            // invalidatesTags: (result, error, {id}) => [{ type: "products", id }],
+            invalidatesTags:["products"]
         }),
         deleteProduct: builder.mutation({
             query: (id) => ({
