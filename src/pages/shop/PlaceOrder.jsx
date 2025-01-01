@@ -48,6 +48,7 @@ const PlaceOrder = () => {
       const response = await fetch(`${getBaseUrl()}/api/orders/create-checkout-session`, {
         method: "POST",
         headers: headers,
+        credentials: 'include',
         body: JSON.stringify(body)
       });
 
