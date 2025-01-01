@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { getBaseUrl } from '../../utils/baseURL';
+import { toast } from 'sonner';
 
 
 const PlaceOrder = () => {
   const { subTotal, grandTotal, delivery, products, deliveryRate } = useSelector((store) => store.cart);
 
-  const {user} = useSelector(state => state.auth)
+  const { user } = useSelector(state => state.auth)
 
 
   const [data, setData] = useState({
@@ -30,34 +31,59 @@ const PlaceOrder = () => {
 
   const handleCheckout = async (event) => {
     event.preventDefault();
-    const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PK);
 
-    const body = {
-      products: products,
-      userId: user?._id,
-      address: data
+    try {
+      const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PK);
+
+      const body = {
+        products: products,
+        userId: user?._id,
+        address: data
+      };
+
+      const headers = {
+        "Content-Type": "application/json"
+      };
+
+      const response = await fetch(`${getBaseUrl()}/api/orders/create-checkout-session`, {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(body)
+      });
+
+      if (response.status === 401) {
+        throw new Error("Unauthorized, please login");
+      }
+
+      if (!response.ok) {
+        throw new Error("Failed to create checkout session");
+      }
+
+      const session = await response.json();
+      console.log("session: ", session);
+
+      const result = await stripe.redirectToCheckout({
+        sessionId: session.id
+      });
+
+      if (result.error) {
+        throw new Error(result.error.message);
+      }
+
+      console.log("Result:", result);
+
+    } catch (error) {
+      console.error("Checkout Error:", error);
+
+
+      if (error.message === "Unauthorized, please login") {
+        toast.error(error.message);
+      } else {
+        toast.error(`Checkout failed: ${error.message}`);
+      }
     }
-
-    const headers = {
-      "Content-Type": "application/json"
-    }
-
-    const response = await fetch(`${getBaseUrl()}/api/orders/create-checkout-session`, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(body)
-    });
-
-    const session = await response.json()
-    console.log("session: ", session);
-
-    const result = stripe.redirectToCheckout({
-      sessionId: session.id
-    });
-
-    console.log("Result:", result)
-
   };
+
 
   return (
     <div className='section__container'>
